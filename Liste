@@ -1,0 +1,17 @@
+# int-gration-web
+import React from 'react';
+
+
+function App() {
+  const Fruits = [{ name: 'Pomme' }, { name: 'Ananas' }];
+
+  return (
+    <div>
+      {Fruits.map((x) => (
+        <p key={x.name}>{x.name}</p>
+      ))}
+    </div>
+  );
+}
+
+export default App;
