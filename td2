@@ -1,0 +1,43 @@
+# int-gration-web
+//app.js 
+import './App.css';
+import Star from './component/star';
+function App() {
+  return (
+    <div className="App">
+ <Star/>
+ <Star/>
+ <Star/>
+ <Star/>
+ <Star/>
+    </div>
+  );
+}
+
+export default App;
+
+// star.js 
+
+import React from 'react'
+class Star extends React.component{
+    constructor(props){
+        super(props);
+        this.state={on:false};
+        this.handleClick=this.handleClick.bind(this);
+    } 
+    handleClick(){
+        if ( this.state.on = false ){
+        this.setState({on:true})
+    }
+    else this.setState({on:false})
+    };
+    render(){
+    return(
+        <img alt ='tt' src ={ this.state.on ? process.env.PUBLIC_URL +'/star_on.png':
+        process.env.PUBLIC_URL +'/star_off.png' }
+       onClick={this.handleClick}
+        /> 
+        );
+}
+}
+export default Star;
